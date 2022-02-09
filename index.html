@@ -14,15 +14,16 @@
     .box {
         width: 200px;
         height: 160px;
-        background-image: url('pngtree-alien-ufo-clip-art-png-image_3091188.png');
+        background-image: url('/pngtree-alien-ufo-clip-art-png-image_3091188.png');
         background-size: contain;
         position: relative;
         background-repeat: no-repeat;
-        animation: moveit 2s ease 0s infinite forwards normal;
         /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        animation: moveit 2s ease 0s infinite forwards normal;
+        -webkit-animation: moveit 2s ease 0s infinite forwards normal;;
+        animation: moveit 2s ease 0s infinite forwards normal;
     }
-
-    @keyframes moveit {
+    @-webkit-keyframes moveit {
         0%{
             left: 0;
             bottom: -50%;
@@ -30,6 +31,23 @@
         50%{
             transform: scale(11) rotate(60deg);
             background-image: url("2.png");
+            /* transform:  */
+        }
+        100%{
+            left: calc(100% - 200px);
+            bottom: -25%;
+
+        }
+    }
+    
+    @keyframes moveit {
+        0%{
+            left: 0;
+            bottom: -50%;
+        }
+        50%{
+            transform: scale(11) rotate(60deg);
+            background-image: url("/2.png");
             /* transform:  */
         }
         100%{
